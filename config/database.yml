@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+  username: postgres
+  password: 123456
+
+development:
+  <<: *default
+  database: timetracker_dev
+
+test:
+  <<: *default
+  database: timetracker_test
+
+production:
+  <<: *default
+  database: timetracker_dev
